@@ -1,0 +1,24 @@
+Hadoop:
+list files in the directory: 
+  hadoop fs -ls /user/rlian2
+copy from local to hdfs: 
+  (one file) hadoop fs -copyFromLocal /nobackup/covidtwitter_2021/covid19-1613630757051-4-js.json /user/rlian2
+  (multiple files) hadoop fs -copyFromLocal /nobackup/covidtwitter_2021/covid19-1612167791102-2-js.json /nobackup/covidtwitter_2021/covid19-1612167832191-1-js.json /user/rlian2/FebCovid
+find files end with .json:
+  find . -name "*.json" -type f
+delete files end with .json:
+  find . -name "*.json" -type f -delete
+download multiple files to local:
+  scp rlian2@tdc1.cs.wisc.edu:/scratch.1/covidtweets_before_july/covidtweets_1/\{covid19-1592113577255-1-js.json,covid19-1592113962992-4-js.json\} ./
+show hive table volume:
+  hdfs dfs -du -s -h /path/to/table/name
+  
+Hive:
+display all hive tables:
+  show tables;
+display all contents in a table:
+  select * from covid_rc_1;
+display the one line in a table:
+  SELECT * FROM covid_rc_1 LIMIT 1;
+
+

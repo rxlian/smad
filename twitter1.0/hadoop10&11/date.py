@@ -5,7 +5,7 @@ timestamp = int(sys.argv[1].split('-')[1])
 dates = datetime.fromtimestamp(timestamp / 1e3)
 
 year, month, day, hour = dates.year, dates.month, dates.day, dates.hour
-index = int(sys.argv[1].split('-')[2].split('.')[0])
+index = int(sys.argv[1].split('-')[2])
 f1 = open('tmp_year.txt', 'w')
 f2 = open('tmp_month.txt', 'w')
 f3 = open('tmp_day.txt', 'w')

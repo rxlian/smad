@@ -20,5 +20,7 @@ display all contents in a table:
   select * from covid_rc_1;
 display one line in a table:
   SELECT * FROM covid_rc_1 LIMIT 1;
+display columns:
+  describe covid_rc_1;
 
 
